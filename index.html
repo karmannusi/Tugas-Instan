@@ -3,87 +3,207 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jasa Desain & Tugas</title>
+  <title>Tugas Instan - Jasa Desain & Tugas Online</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-    header { background: #2c3e50; color: white; padding: 40px; text-align: center; }
-    header h1 { margin: 0; font-size: 2.5em; }
-    header p { font-size: 1.2em; margin: 10px 0; }
-    .btn { display: inline-block; background: #27ae60; color: white; padding: 12px 20px; margin: 10px; text-decoration: none; border-radius: 6px; }
-    section { padding: 40px 20px; max-width: 1000px; margin: auto; }
-    h2 { text-align: center; margin-bottom: 20px; color: #2c3e50; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-    .card { background: #f9f9f9; padding: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    footer { background: #2c3e50; color: white; text-align: center; padding: 20px; margin-top: 30px; }
+    body { 
+      font-family: 'Segoe UI', Tahoma, sans-serif; 
+      margin: 0; 
+      padding: 0; 
+      background: #f5f7fa; 
+      color: #2c3e50; 
+    }
+
+    /* HEADER */
+    header {
+      background: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      color: white; 
+      text-align: center; 
+      padding: 100px 20px;
+      box-shadow: inset 0 0 0 2000px rgba(44,62,80,0.6);
+    }
+    header h1 { font-size: 3em; margin: 0; font-weight: 700; }
+    header p { font-size: 1.3em; margin: 20px 0; }
+    .btn {
+      display: inline-block;
+      background: #27ae60; 
+      color: white;
+      padding: 14px 28px; 
+      border-radius: 8px;
+      text-decoration: none;
+      margin: 10px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .btn:hover { background: #2ecc71; }
+
+    /* Section */
+    section { padding: 70px 20px; max-width: 1100px; margin: auto; }
+    h2 { 
+      text-align: center; 
+      font-size: 2.3em; 
+      margin-bottom: 40px; 
+      color: #34495e; 
+      border-bottom: 3px solid #27ae60;
+      display: table;
+      margin-left: auto;
+      margin-right: auto;
+      padding-bottom: 8px;
+    }
+
+    /* Grid */
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; }
+    .card { 
+      background: #fff; 
+      padding: 25px; 
+      border-radius: 14px; 
+      box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+      transition: 0.3s;
+      text-align: center;
+    }
+    .card:hover { transform: translateY(-6px); }
+    .card img { width: 60px; margin-bottom: 15px; }
+
+    /* Portofolio */
+    .portfolio a { 
+      display: block;
+      background: #fff; 
+      padding: 40px 20px; 
+      border-radius: 12px; 
+      text-align: center;
+      font-weight: bold;
+      color: #2c3e50;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+    .portfolio a:hover { background: #ecf0f1; transform: scale(1.05); }
+
+    /* Tentang */
+    .about { text-align:center; font-size: 1.15em; max-width: 800px; margin:auto; }
+
+    /* Ikon Sosial */
+    .contact-icons {
+      margin-top: 20px;
+      text-align: center;
+    }
+    .icon-social {
+      width: 40px;
+      height: 40px;
+      margin: 0 10px;
+      transition: transform 0.3s;
+      vertical-align: middle;
+    }
+    .icon-social:hover { transform: scale(1.15); }
+
+    /* FOOTER */
+    footer {
+      background: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      color: white; 
+      text-align: center; 
+      padding: 50px 20px; 
+      margin-top: 60px;
+      box-shadow: inset 0 0 0 2000px rgba(44,62,80,0.7);
+    }
+    footer p { margin: 0; font-size: 1em; }
+
+    /* Floating WhatsApp */
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: #fff;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 2px 2px 5px #999;
+      z-index: 100;
+    }
+    .whatsapp-float img {
+      width: 36px;
+      margin-top: 12px;
+    }
+    .whatsapp-float:hover {
+      background-color: #20b955;
+      transform: scale(1.1);
+      transition: 0.3s;
+    }
   </style>
 </head>
 <body>
 
-  <!-- Hero -->
+  <!-- HERO -->
   <header>
-    <h1>Jasa Desain & Tugas Online</h1>
-    <p>Cepat, Profesional, & Terjangkau</p>
-    <a href="https://wa.me/628xxxxxxx?text=Halo%20saya%20mau%20pesan%20jasa" class="btn">Pesan via WhatsApp</a>
+    <h1>📚 Tugas Instan</h1>
+    <p>Solusi Modern untuk Desain & Tugas Online</p>
+    <a href="https://wa.me/6285326816850?text=Halo%20Karman,%20saya%20mau%20pesan%20jasa" class="btn">Pesan via WhatsApp</a>
     <a href="#portofolio" class="btn">Lihat Portofolio</a>
   </header>
 
-  <!-- Keunggulan -->
+  <!-- KEUNGGULAN -->
   <section>
     <h2>Kenapa Memilih Kami?</h2>
     <div class="grid">
-      <div class="card">✅ Hasil Cepat</div>
-      <div class="card">✅ Harga Terjangkau</div>
-      <div class="card">✅ Revisi Gratis</div>
+      <div class="card"><img src="https://img.icons8.com/color/96/speed.png"/><h3>Cepat</h3><p>Hasil instan & selalu tepat waktu.</p></div>
+      <div class="card"><img src="https://img.icons8.com/color/96/money-bag.png"/><h3>Terjangkau</h3><p>Harga ramah pelajar & mahasiswa.</p></div>
+      <div class="card"><img src="https://img.icons8.com/color/96/customer-support.png"/><h3>Dukungan</h3><p>Fast response via WhatsApp & Instagram.</p></div>
     </div>
   </section>
 
-  <!-- Layanan -->
+  <!-- LAYANAN -->
   <section>
     <h2>Layanan Kami</h2>
     <div class="grid">
-      <div class="card">
-        <h3>Jasa Desain</h3>
-        <p>- Poster / Banner<br>- Logo & Branding<br>- Desain Presentasi<br>- Infografis</p>
-      </div>
-      <div class="card">
-        <h3>Jasa Tugas</h3>
-        <p>- Makalah & Essay<br>- Laporan Praktikum<br>- PowerPoint Presentasi<br>- Data Entry Excel</p>
-      </div>
+      <div class="card"><img src="https://img.icons8.com/color/96/poster.png"/><h3>Poster / Banner</h3><p>Desain promosi untuk event, seminar, dan kegiatan kampus.</p></div>
+      <div class="card"><img src="https://img.icons8.com/color/96/idea.png"/><h3>Logo & Branding</h3><p>Membangun identitas visual untuk organisasi atau bisnis kecil.</p></div>
+      <div class="card"><img src="https://img.icons8.com/color/96/presentation.png"/><h3>Desain Presentasi</h3><p>Slide PowerPoint yang menarik, rapi, dan profesional.</p></div>
+      <div class="card"><img src="https://img.icons8.com/color/96/statistics.png"/><h3>Infografis</h3><p>Data & informasi ditampilkan dengan visual modern.</p></div>
+      <div class="card"><img src="https://img.icons8.com/color/96/document.png"/><h3>Makalah & Essay</h3><p>Pengerjaan tugas akademik yang sesuai format & gaya bahasa.</p></div>
+      <div class="card"><img src="https://img.icons8.com/color/96/microscope.png"/><h3>Laporan Praktikum</h3><p>Dari analisis data sampai penyusunan laporan lengkap.</p></div>
     </div>
   </section>
 
-  <!-- Portofolio -->
+  <!-- PORTOFOLIO -->
   <section id="portofolio">
     <h2>Portofolio</h2>
-    <div class="grid">
-      <div class="card">📌 Contoh Desain Poster</div>
-      <div class="card">📌 Contoh Slide Presentasi</div>
-      <div class="card">📌 Contoh Cover Makalah</div>
+    <div class="grid portfolio">
+      <a href="https://www.instagram.com/jasadesaintugas31" target="_blank">📖 Contoh Desain Poster</a>
+      <a href="https://www.instagram.com/jasadesaintugas31" target="_blank">📊 Contoh Slide Presentasi</a>
+      <a href="https://www.instagram.com/jasadesaintugas31" target="_blank">📕 Contoh Cover Makalah</a>
     </div>
   </section>
 
-  <!-- Tentang -->
+  <!-- TENTANG -->
   <section>
     <h2>Tentang Kami</h2>
-    <p style="text-align:center; max-width:700px; margin:auto;">
-      Kami adalah tim freelancer yang berfokus pada jasa desain grafis dan pengerjaan tugas akademik. 
-      Mengutamakan kualitas, kecepatan, dan kepuasan pelanggan.
+    <p class="about">
+      <b>Tugas Instan</b> adalah jasa desain & pengerjaan tugas online yang dikelola oleh <b>Karman</b>.  
+      Kami siap membantu pelajar dan mahasiswa dengan hasil yang cepat, rapi, dan profesional.  
     </p>
-  </section>
 
-  <!-- Kontak -->
-  <section>
-    <h2>Hubungi Kami</h2>
-    <p style="text-align:center;">
-      📱 WhatsApp: <a href="https://wa.me/628xxxxxxx">Klik di sini</a><br>
-      📧 Email: admin@jasadesaintugas.com<br>
-      📷 Instagram: <a href="#">@jasadesaintugas</a>
-    </p>
+    <div class="contact-icons">
+      <a href="https://wa.me/6285326816850" target="_blank">
+        <img src="https://img.icons8.com/color/96/whatsapp--v1.png" alt="WhatsApp" class="icon-social">
+      </a>
+      <a href="mailto:karmanvenom@gmail.com">
+        <img src="https://img.icons8.com/color/96/apple-mail.png" alt="Email" class="icon-social">
+      </a>
+      <a href="https://instagram.com/karmannusi" target="_blank">
+        <img src="https://img.icons8.com/color/96/instagram-new.png" alt="Instagram" class="icon-social">
+      </a>
+    </div>
   </section>
 
   <footer>
-    <p>© 2025 Jasa Desain & Tugas Online | All Rights Reserved</p>
+    <p>© 2025 Tugas Instan | Website oleh Karman</p>
   </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/6285326816850?text=Halo%20Karman,%20saya%20mau%20pesan%20jasa" class="whatsapp-float" target="_blank">
+    <img src="https://img.icons8.com/color/96/whatsapp--v1.png" alt="WA">
+  </a>
 
 </body>
 </html>
